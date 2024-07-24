@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tasks | Задачи</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/stylesheets.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <a href="tasks.html"><div class="menu-item-1" data-page="page1">Задачи</div></a>
+        <a href="users.html"><div class="menu-item" data-page="page2">Пользователи</div></a>
+        <a href="protocols.html"><div class="menu-item" data-page="page3">Протоколы</div></a>
+        <a href="portfolios.html"><div class="menu-item" data-page="page4">Портфели</div></a>
+        <a href="projects.html"><div class="menu-item" data-page="page5">Проекты</div></a>
+
+        <hr>
+
+        <div class="filter-form">
+            <form action="" method="get">
+                <label class="filter-label-1" for="status">Статус</label>
+                <select class="filter-label-1-s" id="status" name="status">
+                    <option value="all">Все</option>
+                    <option value="open">Открыт</option>
+                    <option value="closed">Закрыт</option>
+                </select>
+                <br>
+                
+                <label class="filter-label-2" for="responsible">Ответственный</label>
+                <select class="filter-label-2-s" class="filter-otv" id="responsible" name="responsible">
+                    <option value="all">Все</option>
+                    <option value="ivanov">Иванов Иван Иванович</option>
+                    <option value="andreev">Андреев Андрей Дмитриевич</option>
+                </select>
+                <br>
+
+                <label class="filter-label-3" for="protocol">Протокол</label>
+                <select class="filter-label-3-s" id="protocol" name="protocol">
+                    <option value="all">Все</option>
+                    <option value="protocol1">Протокол 1</option>
+                    <option value="protocol2">Протокол 2</option>
+                </select>
+                <br>
+
+                <label class="filter-label-4" for="portfolio">Портфель</label>
+                <select class="filter-label-4-s" id="portfolio" name="portfolio">
+                    <option value="all">Все</option>
+                    <option value="portfolio1">Портфель 1</option>
+                    <option value="portfolio2">Портфель 2</option>
+                </select>
+                <br>
+                
+                <label class="filter-label-5" for="project">Проект</label>
+                <select class="filter-label-5-s" id="project" name="project">
+                    <option value="all">Все</option>
+                    <option value="project1">Проект 1</option>
+                    <option value="project2">Проект 2</option>
+                </select>
+                <br>
+
+                <button class="download-file" type="submit">
+                    <svg class="download-file-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                      <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                      <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                    </svg>Скачать отчет
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="user">
+            <ul class="user-ul">
+                <li class="user-li-1"><b>Заголовок: </b>Название задачи</li>
+                <li class="user-li-2"><b>Описание: </b>А в какой последовательности необходимо подключать шрифт с помощью такой ссылки? Я имею в виду в head содержится много ссылок и как выбрать правильно расположение для данной? Я слышал, что порядок подключения играет роль. Например, все css подключают в начале, а js-файлы в конце.</li>
+                <li class="user-li-3"><b>Дата начала: </b>24.07.2023</li>
+                <li class="user-li-4"><b>Дата конца: </b>29.07.2023</li>
+                <li class="user-li-4"><b>Приоритет: </b>высокий</li>
+                <li class="user-li-4"><b>Статус: </b>Открыт</li>
+                <li class="user-li-4"><b>Ответственный: </b>Бондарев М.Д.</li>
+            </ul>
+        </div>
+
+        <div class="user">
+            <ul class="user-ul">
+                <li class="user-li-1"><b>Заголовок: </b>Название задачи</li>
+                <li class="user-li-2"><b>Описание: </b>Простое описание </li>
+                <li class="user-li-3"><b>Дата начала: </b>02.06.2024</li>
+                <li class="user-li-4"><b>Дата конца: </b>30.06.2024</li>
+                <li class="user-li-4"><b>Приоритет: </b>средний</li>
+                <li class="user-li-4"><b>Статус: </b>Закрыт</li>
+                <li class="user-li-4"><b>Ответственный: </b>Авдеев А.Д.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- Модальное окно -->
+<div id="createTaskModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 style="font-family: 'Roboto Mono', monospace;">Создать задачу</h2>
+        </div>
+        <div class="modal-body">
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="task-name" style="font-family: 'Roboto Mono', monospace;">Название задачи</label>
+                    <input type="text" id="task-name" name="taskName" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-desc" style="font-family: 'Roboto Mono', monospace;">Описание</label>
+                    <textarea id="task-desc" name="taskDesc" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="task-start-date" style="font-family: 'Roboto Mono', monospace;">Дата начала</label>
+                    <input type="date" id="task-start-date" name="taskStartDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-deadline" style="font-family: 'Roboto Mono', monospace;">Дата сдачи</label>
+                    <input type="date" id="task-deadline" name="taskDeadline" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-priority" style="font-family: 'Roboto Mono', monospace;">Приоритет</label>
+                    <select id="task-priority" name="taskPriority" required>
+                        <option value="low">Низкий</option>
+                        <option value="medium">Средний</option>
+                        <option value="high">Высокий</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="task-status" style="font-family: 'Roboto Mono', monospace;">Статус</label>
+                    <select id="task-status" name="taskStatus" required>
+                        <option value="open">Открыт</option>
+                        <option value="in-progress">В процессе</option>
+                        <option value="closed">Закрыт</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="task-responsible" style="font-family: 'Roboto Mono', monospace;">Ответственный</label>
+                    <select id="task-responsible" name="taskResponsible" required>
+                        <option value="bondarev">Бондарев М.Д.</option>
+                        <option value="avdeev">Авдеев А.Д.</option>
+                        <option value="ivanov">Иванов И.И.</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="submit-task" style="font-family: 'Roboto Mono', monospace;">Создать</button>
+        </div>
+    </div>
+</div>
+
+<a href="javascript:void(0);">
+    <button class="rounded-button" data-action="create-task" id="create-task-btn">Cоздать задачу</button>
+</a>
+
+
+<script>
+    // Получаем элементы
+    var modal = document.getElementById("createTaskModal");
+    var btn = document.getElementById("create-task-btn");
+    var span = document.getElementsByClassName("close")[0];
+    var submitBtn = document.getElementById("submit-task");
+
+    // Открыть модальное окно при клике на кнопку
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // Закрыть модальное окно при клике на крестик
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Закрыть модальное окно при клике вне его
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    submitBtn.onclick = function() {
+        alert("Задача создана!");
+        modal.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
